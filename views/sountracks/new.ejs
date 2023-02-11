@@ -1,0 +1,22 @@
+
+<%- include('../partials/header') %>
+
+<section id="badge-container">
+  <% soundtrack.forEach(function(p) { %>
+    <article class="badge"><%= p.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-performer-form" action="/soundtrack" method="POST">
+  <label>Album:</label>
+  <input type="text" name="album">
+  <label>Artist:</label>
+  <input type="text" name="artist">
+  <label>Release Year:</label>
+  <input type="text" name="releaseYear">
+  <label>Label:</label>
+  <input type="text" name="label">
+  <input type="submit" value="Add Performer">
+</form>
+
+<%- include('../partials/footer') %>

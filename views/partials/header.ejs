@@ -8,10 +8,17 @@
   <title><%= title %></title>
 </head>
 <body>
-    <nav><a href="/">HOME or WHATEVER YOU WANT</a>
-     
-        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-      <% } %>
+    <nav><a href="/">FILMU</a>
+      <img src="/images/logo.png">
+      <a href="/films" <%- title === 'All Films' ? 'class="active"' : '' %>>ALL MOVIES</a>
+    <% if (user) { %>
+      <a href="/soundtracks/new"	<%- title === 'Add Soundtrack' ? 'class="active"' : '' %>>
+      ADD PERFORMER</a>
+      <a href="/films/new" <%- title === 'Add Film' ? 'class="active"' : '' %>>ADD MOVIE</a>
+      <a href="/logout">LOG OUT</a>
+    <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <% } %>
     
     </nav>
 </body>
