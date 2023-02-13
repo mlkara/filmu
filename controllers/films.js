@@ -4,9 +4,8 @@ const Soundtrack = require('../models/soundtrack');
 module.exports = {
   index,
   show,
-  new: newMovie,
-  create,
-  addToDetails
+  new: newFilm,
+  create
 };
 
 function index(req, res) {
@@ -16,43 +15,26 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  Film.findById(req.params.id)
-    .populate('details')
-    .exec(function(err, film) {
-      Soundtrack.find(
-        {_id: {$nin: film.detail}},
-        function(err, soundtracks) {
-          console.log(soundtracks);
-          res.render('films/show', {
-            title: 'Details',
-            movie,
-            soundtrack
-          });
-        }
-      );
-    });
-}
+  Film.findById(req.params.id, function(err, film) {
+    Soundtrack.find({film: film._id}, function(err, soundtracks) {
+      res.render('films/show',{film, title: 'Film Details', soundtracks})
+    })
+  });   
+};  
+
 
 function newFilm(req, res) {
-  res.render('films/new', { title: 'Add Films' });
+  res.render('films/new', { title: 'Add Film' });
 }
 
 function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key];
-  };
-  Film.create(req.body, (err) => {
-    if(err) return res.render('films/new')
-    res.redirect('/films')
-  })
-  };
-
-  function addToDetails(req,res) {
-    Film.findById(req.params.id,function(err,film) {
-      film.soundtrack.push(req.body.soundtrackId)
-      film.save(function(err) {
-      res.redirect(`/flights/${film._id}`)
-    })
-  })
   }
-  
+  const film = new Film(req.body);
+  film.save(function(err) {
+    if (err) return res.redirect('/films/new');
+    console.log(film);
+    res.redirect(`/films/${film._id}`);
+  });
+}

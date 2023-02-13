@@ -5,7 +5,6 @@ module.exports = {
   new: newSoundtrack,
   create,
   addToDetails
-  
 };
 
 function create(req, res) {
