@@ -29,4 +29,11 @@ router.get('/logout', function(req, res) {
   });
 });
 
+router.get('/', function(req, res, next) {
+  const username = req.query.username;
+  console.log(`username: ${username}`);
+  res.render('index');
+});
+
+
 module.exports = router;
