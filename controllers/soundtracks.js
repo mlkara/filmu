@@ -2,19 +2,15 @@ const Soundtrack = require('../models/soundtrack');
 const Film = require('../models/film');
 
 module.exports = {
-  // index,
   new: newSoundtrack,
   create,
 };
 
-// function index(req, res) {
-//   Soundtrack.find({}, function(err, soundtracks) {
-//     res.render('soundtracks/index', { title: 'All Soundtracks', soundtrack});
-//   })
-// }
 
 function newSoundtrack(req, res) {
-  res.render('soundtracks/new', { title: 'Add Soundtrack' });
+  Film.find({}, function(err, film) {
+    res.render('soundtracks/new', {title: 'Soundtrack Title', film, filmId: req.params.id})
+  })
 }
 
 function create(req, res) {
