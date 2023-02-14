@@ -1,12 +1,21 @@
 <%- include('../partials/header') %>
 
-section id="show-page">
+<section id="show-page">
   <div>Title: </div>
   <div><%= film.title %></div>
   <ul>
+
     
     <% if (user) { %>
-      <button><a href='/films/<%= film._id %>/soundtracks/new'></a>Add Soundtrack</button>
+      <button><a href='/films/<%= film._id %>/soundtracks/new'>Add Soundtrack</a></button>
     <% } %>
+
+    <div>Soundtracks:</div>
+    <% soundtracks.forEach(function(s) { %>
+      <tr>
+        <td><%= s.title %></td>
+        <td><%= s.artist %></td>
+      </tr>
+    <% }); %>
 
   <%- include('../partials/footer') %>

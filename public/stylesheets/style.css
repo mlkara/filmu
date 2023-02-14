@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Michroma', sans-serif;
-  color: white;
+  
 }
 
 body {
@@ -188,3 +188,4 @@ li {
   border-radius: 50%;
   height: 40px;
 }
+

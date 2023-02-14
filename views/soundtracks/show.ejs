@@ -1,7 +1,21 @@
+<%- include('../partials/header') %>
+
+section id="show-page">
+  <div>Album Title: </div>
+  <div><%= album.title %></div>
+  <div>Artist: </div>
+  <div><%= album.artist %></div>
+  <ul>
+    
+
+
+  <%- include('../partials/footer') %>
+
+
 <br><br><h2>Reviews</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST"
-    action="/films/<%= film._id %>/reviews">
+    action="/soundtracks/<%= soundtrack._id %>/reviews">
     <label>Review:</label>
     <textarea name="content"></textarea>
     <label>Rating:</label>
@@ -49,7 +63,7 @@
         <td colspan="2"></td>
         <td>
           <strong>
-            <%= (total / film.reviews.length).toFixed(1) %>
+            <%= (total / soundtrack.reviews.length).toFixed(1) %>
           </strong>
         </td>
       </tr>
@@ -58,3 +72,5 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
+
+<%- include('../partials/footer') %>

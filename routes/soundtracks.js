@@ -4,6 +4,7 @@ const soundtracksCtrl = require('../controllers/soundtracks');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 router.get('/films/:id/soundtracks/new', ensureLoggedIn, soundtracksCtrl.new);
-router.post('/soundtracks', ensureLoggedIn, soundtracksCtrl.create);
+router.get('/soundtracks/:id', ensureLoggedIn, soundtracksCtrl.show)
+router.post('/films/:id/soundtracks', ensureLoggedIn, soundtracksCtrl.create);
 
 module.exports = router;

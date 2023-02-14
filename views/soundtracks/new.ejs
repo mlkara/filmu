@@ -1,0 +1,17 @@
+
+<%- include('../partials/header') %>
+
+
+<form id="add-soundtrack-form" action="/films/<%= filmId %>/soundtracks" method="POST">
+  <label>Album:</label>
+  <input type="text" name="albumTitle">
+  <label>Artist:</label>
+  <input type="text" name="artist">
+  <label>Music Url:</label>
+  <input type="text" name="trackUrl">
+
+ 
+  <input type="submit" value="Add Soundtrack">
+</form>
+
+<%- include('../partials/footer') %>
