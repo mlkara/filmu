@@ -1,17 +1,18 @@
 
 <%- include('../partials/header') %>
 
+<div class="indexWrapper3">
 
-
+  
   <div class="card text-bg-dark">
-    <img src="/images/soundtracks.jpeg" class="card-img" alt="...">
+    
     <div class="card-img-overlay">
       <h5 class="card-title">ADD MUSIC</h5>
       <p class="card-text"><form id="add-soundtrack-form" action="/films/<%= filmId %>/soundtracks" method="POST">
         <label>Song:</label>
-        <input type="text" name="song"><br>
+        <input type="text" name="songTitle"><br>
         <label>Artist:</label>
-        <input type="text" name="artist"><br>
+        <input type="text" name="artistName"><br>
         <label>Music Url:</label>
         <input type="text" name="trackUrl"> <br>
         <input type="submit" value="Add Soundtrack">
@@ -21,4 +22,5 @@
   </div>
 </div>
 
+</div>
 <%- include('../partials/footer') %>

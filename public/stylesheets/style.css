@@ -200,4 +200,20 @@ background-image: url("/images/main.jpeg");
 
 .boxLetters {
   background-color: white;
+  width: 250px;
+  height: 300px;
+  background-color: #F10006;
+  color: white; 
 }
+
+.indexWrapper2 {
+background-image: url("/images/soundtrack.jpg");
+}
+
+.indexWrapper3 {
+background-image: url("/images/soundtracks.jpeg");
+}
+.indexWrapper3 {
+background-image: url("/images/soundtrack.jpeg");
+}
+
