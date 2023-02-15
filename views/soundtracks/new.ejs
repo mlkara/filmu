@@ -1,17 +1,32 @@
 
 <%- include('../partials/header') %>
 
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/images/soundtracks.jpeg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">ADD MUSIC</h5>
+        <p class="card-text"><form id="add-soundtrack-form" action="/films/<%= filmId %>/soundtracks" method="POST">
+          <label>Album:</label>
+          <input type="text" name="albumTitle"><br>
+          <label>Song:</label>
+          <input type="text" name="song"><br>
+          <label>Artist:</label>
+          <input type="text" name="artist"><br>
+          <label>Music Url:</label>
+          <input type="text" name="trackUrl"> <br>
+          <input type="submit" value="Add Soundtrack">
+        </form></p>
+        <p class="card-text"><small class="text-muted">May the Filmu be with you.</small></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<form id="add-soundtrack-form" action="/films/<%= filmId %>/soundtracks" method="POST">
-  <label>Album:</label>
-  <input type="text" name="albumTitle">
-  <label>Artist:</label>
-  <input type="text" name="artist">
-  <label>Music Url:</label>
-  <input type="text" name="trackUrl">
 
- 
-  <input type="submit" value="Add Soundtrack">
-</form>
+
 
 <%- include('../partials/footer') %>

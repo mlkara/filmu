@@ -1,16 +1,23 @@
 <%- include('../partials/header') %>
 
-section id="show-page">
+<section id="show-page">
+<div class="card text-bg-dark">
+  <img src="/images/soundtracks.png" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text"></p>
+    <p class="card-text"><small>You can't handle the Filmu</small></p>
+  </div>
+</div>
+
+
   <div>Album Title: </div>
-  <div><%= album.title %></div>
+  <div><%= album.albumTitle %></div>
+  <div>Song Title: </div>
+  <div><%= album.song %></div>
   <div>Artist: </div>
   <div><%= album.artist %></div>
   <ul>
-    
-
-
-  <%- include('../partials/footer') %>
-
 
 <br><br><h2>Reviews</h2>
 <% if (user) { %>
@@ -30,47 +37,6 @@ section id="show-page">
   </form>
 <% } %>
 
-<% if (film.reviews.length) { %>
-  <table>
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Date</th>
-        <th>Review</th>
-        <th>Rating</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% let total = 0 %>
-      <% film.reviews.forEach(function(r) { %>
-        <% total += r.rating %>
-        <tr>
-          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"> <%= r.userName %></td>
-          <td><%= r.createdAt.toLocaleDateString() %></td>
-          <td><%= r.content %></td>
-          <td><%= r.rating %></td>
-          <td>
-            <% if (user?._id.equals(r.user)) { %>
-              <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-              </form>
-            <% } %>
-          </td>
-        </tr>
-      <% }); %>
-      <tr>
-        <td colspan="2"></td>
-        <td>
-          <strong>
-            <%= (total / soundtrack.reviews.length).toFixed(1) %>
-          </strong>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-<% } else { %>
-  <h5>No Reviews Yet</h5>
-<% } %>
+
 
 <%- include('../partials/footer') %>

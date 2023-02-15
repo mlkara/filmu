@@ -29,6 +29,11 @@ const soundtrackSchema = new Schema({
     type: String,
     required: true
   },
+  
+  song: {
+    type: String,
+    required: true
+  },
 
     artist: {
       type: String,

@@ -8,6 +8,14 @@ const filmSchema = new Schema({
     required: true
   },
 
+  releaseYear: {
+    type: Number,
+    default: function() {
+        return new Date().getFullYear();
+    },
+    min: 1927
+},
+
 soundtracks: [{
   type: Schema.Types.ObjectId, 
   ref: 'Soundtrack'

@@ -1,10 +1,28 @@
 
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/films" method="POST">
-    <label>Title:</label>
-    <input type="text" name="title">
-    <input type="submit" value="Add Film">
-  </form>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/images/film.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">ADD FILM</h5>
+        <p class="card-text"><form id="new-form" action="/films" method="POST">
+          <label>Title:</label>
+          <input type="text" name="title">
+          <label>Release Year:</label>
+          <input type="number" name="releaseYear">
+          <input type="submit" value="Add Film">
+        </form></p>
+        <p class="card-text"><small class="text-muted">Here's looking at you, Filmu</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <%- include('../partials/footer') %>

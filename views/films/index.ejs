@@ -1,13 +1,29 @@
 <%- include('../partials/header') %>
   
 <% films.forEach(function(f) { %>
-   
-    <tr>
-      <td><%= f.title %></td>
-      <td><a href="/films/<%= f._id %>">DETAILS</a></td>
-    </tr>
-    <% }); %>
-  </tbody>
-</table>
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/images/main.jpeg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">ALL FILMS</h5>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">You had me at Filmu.</small></p>
+        </div>
+      </div>
+
+      <tr>
+        <td><%= f.title %></td>
+        <td><a href="/films/<%= f._id %>">FILM DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+    
+
+
+    
 
 <%- include('../partials/footer') %>
