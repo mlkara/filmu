@@ -35,6 +35,6 @@ function create(req, res) {
 
 function show(req, res) {
   Soundtrack.findById(req.params.id, function (err, soundtrack) {
-      res.render("soundtracks/show", { title: "Soundtrack Details", soundtrack });
+  res.render("soundtracks/show", { title: "Soundtrack Details", soundtrack });
   });
 }

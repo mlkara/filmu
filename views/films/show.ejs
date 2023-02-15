@@ -1,16 +1,12 @@
 <%- include('../partials/header') %>
 
+<img src="/images/soundtrack.jpg" class="img-fluid rounded-start" alt="...">
+
 <section id="show-page">
-  
-  <div class="card text-bg-dark">
-    <img src="/images/soundtrack.jpg" class="card-img" alt="...">
-    <div class="card-img-overlay">
-      <h5 class="card-title">FILM</h5>
-      <p class="card-text">
-        
-        <div>TITLE </div>
+
+        <div>FILM TITLE</div>
         <div><%= film.title %></div>
-        <div>YEAR </div>
+        <div>YEAR</div>
         <div><%= film.releaseYear %></div>
         <ul>
         <ul>
@@ -18,18 +14,16 @@
             <button><a href='/films/<%= film._id %>/soundtracks/new'>Add Soundtrack</a></button>
           <% } %>
       
-          <div class="card w-50">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"> <div>Soundtracks:</div>
+     
+             <div>Soundtracks:</div>
                 <% soundtracks.forEach(function(s) { %>
                   <tr>
                     <td><%= s.albumTitle %></td>
-                    <td><%= s.song %></td>
-                    <td><%= s.artist %></td>
+                    <td><%= s.songTitle %></td>
+                    <td><%= s.artistName %></td>
+                    <td><%= s.trackUrl %></td>
                   </tr>
-                <% }); %></p>
-              <a href="#" class="btn btn-primary">Button</a>
+                <% }); %>
             </div>
           </div>
          
@@ -76,11 +70,7 @@
             </table>
           <% } else { %>
             <h5>No Reviews Yet</h5>
-          <% } %></p>
+          <% } %>
       <p class="card-text"><small>Play Filmu again, Sam.</small></p>
-    </div>
-  </div>
-  
-  
 
   <%- include('../partials/footer') %>

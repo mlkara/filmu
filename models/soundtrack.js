@@ -29,13 +29,13 @@ const soundtrackSchema = new Schema({
     type: String,
     required: true
   },
-  
-  song: {
+
+  songTitle: {
     type: String,
     required: true
   },
 
-    artist: {
+    artistName: {
       type: String,
       required: true
     },

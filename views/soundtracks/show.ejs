@@ -4,7 +4,7 @@
 <div class="card text-bg-dark">
   <img src="/images/soundtracks.png" class="card-img" alt="...">
   <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Album:</h5>
     <p class="card-text"></p>
     <p class="card-text"><small>You can't handle the Filmu</small></p>
   </div>
@@ -12,30 +12,12 @@
 
 
   <div>Album Title: </div>
-  <div><%= album.albumTitle %></div>
+  <div><%= soundtracks.albumTitle %></div>
   <div>Song Title: </div>
-  <div><%= album.song %></div>
+  <div><%= soundtracks.songTitle %></div>  
   <div>Artist: </div>
-  <div><%= album.artist %></div>
+  <div><%= soundtracks.artistName %></div>
   <ul>
-
-<br><br><h2>Reviews</h2>
-<% if (user) { %>
-  <form id="add-review-form" method="POST"
-    action="/soundtracks/<%= soundtrack._id %>/reviews">
-    <label>Review:</label>
-    <textarea name="content"></textarea>
-    <label>Rating:</label>
-    <select name="rating">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5" selected>5</option>
-    </select>
-    <input type="submit" value="Add Review">
-  </form>
-<% } %>
 
 
 
