@@ -7,25 +7,27 @@
     
     <section id="show-page">
       
-      <div>FILM TITLE</div>
+      <div>FILM TITLE:</div>
       <div><%= film.title %></div>
-      <div>YEAR</div>
+      <div>YEAR:</div>
       <div><%= film.releaseYear %></div>
       <ul>
         <ul>
           <% if (user) { %>
-            <button><a href='/films/<%= film._id %>/soundtracks/new'>Add Soundtrack</a></button>
+            <button class="addSound"><a href='/films/<%= film._id %>/soundtracks/new'>ADD SOUNDTRACK</a></button>
             <% } %>
             
             
-            <div>Soundtracks:</div>
+            <div>SOUNDTRACKS:</div>
             <% soundtracks.forEach(function(s) { %>
               <tr>
                 <td><%= s.albumTitle %></td>
                 <td><%= s.songTitle %></td>
                 <td><%= s.artistName %></td>
                 
-                <iframe width="640" height="300" src="<%= s.trackUrl %>"></iframe>
+                <div class="video">
+                  <iframe width="640" height="300" src="<%= s.trackUrl %>"></iframe>
+                </div>
                 
               </tr>
               <% }); %>

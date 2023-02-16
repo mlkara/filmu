@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <title><%= title %></title>
 </head>
 <body>
     <nav>
       <img src="/images/logo.jpg"><a href="/">FILMU</a>
-      <a href="/films" <%- title === 'All Films' ? 'class="active"' : '' %>>All Films</a>
+      <a href="/films" <%- title === 'All Films' ? 'class="active"' : '' %>>ALL FILMS</a>
       <% if (user) { %>
-        <a href="/films/new" <%- title === 'Add Film' ? 'class="active"' : '' %>>Add Film</a>
+        <a href="/films/new" <%- title === 'Add Film' ? 'class="active"' : '' %>>ADD FILM</a>
         
         <a href="/logout">LOG OUT</a>
         <% } else { %>

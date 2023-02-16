@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  
   
 }
 
@@ -197,24 +198,37 @@ img {
 
 .indexWrapper {
 background-image: url("/images/main.jpeg");
+
 }
 
 .boxLetters {
-  background-color: white;
+  background-color: black;
   width: 400px;
   height: 300px;
-  background-color: #F10006;
   color: white; 
   padding: 10px;
+  margin: 0 auto;
+  display: grid; 
+  justify-items: center; 
+  align-items: center;
+  place-items: center;
+  border-radius: .8em; 
+  box-shadow: 0 0 0 .4em black;
+  outline: .8em solid black;
 }
 
 .boxLetters5 {
   background-color: white;
   width: 400px;
   height: 300px;
-  background-color: #902C25;
+  background-color: #F10006;
   color: white; 
   padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: .8em; 
+  box-shadow: 0 0 0 .4em #F10006;
+  outline: .8em solid #F10006;
 }
 
 .boxLetters3 {
@@ -224,6 +238,11 @@ background-image: url("/images/main.jpeg");
   background-color: #F10006;
   color: white; 
   padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: .8em; 
+  box-shadow: 0 0 0 .4em #F10006;
+  outline: .8em solid #F10006;
   
 }
 .boxLetters2 {
@@ -233,31 +252,92 @@ background-image: url("/images/main.jpeg");
   background-color: #61255E;
   color: white; 
   padding: 10px;
- 
-  
+  text-align: center;
+  margin: 0 auto;
+  border-radius: .8em; 
+  box-shadow: 0 0 0 .4em #61255E;
+  outline: .8em solid #61255E;
 }
 
 .indexWrapper2 {
 background-image: url("/images/soundtrack.jpg");
+text-align: center;
 }
 
 .indexWrapper3 {
 background-image: url("/images/soundtracks.jpeg");
+text-align: center;
 }
 .indexWrapper4 {
 background-image: url("/images/soundtrack.jpeg");
+text-align: center;
 }
 .indexWrapper5 {
 background-image: url("/images/film.png");
+text-align: center;
+
+
 }
 
 .itemWrapper6 {
   background-image: url("/images/logo.jpg");
-}
+  text-align: center;
+  background-repeat: no-repeat;
+  background-color: black; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 
+}
 .card-text {
   text-align: center;
 }
+
+.video {
+  overflow: hidden; 
+  padding: 20px;
+  display: flex; 
+  justify-content: center; 
+}
+
+.footer {
+  height: 60px;
+  text-align: center;
+  font-size: 5px;
+  background-color: black;
+  color: white;
+}
+
+.details {
+  color: #F10006
+}
+.details:hover {
+  background-color: #F10006;
+  color: white;
+}
+
+.addFilm {
+  font-size: 25px;
+}
+
+
+.addSound {
+  margin: 3px;
+    background-color: #2CB3B8;
+    color: #2CB3B8;
+    border: 1vmin solid #2CB3B8;
+    border-radius: 4vmin;
+    font-size: 10px;
+    outline: none;
+    font-weight: bold;
+}
+
+.addSound:hover {
+  background-color: #2CB3B8;
+  color: white;
+}
+
+
 
 
 
