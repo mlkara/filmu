@@ -25,7 +25,7 @@
                 <td><%= s.songTitle %></td>
                 <td><%= s.artistName %></td>
                 
-                <iframe width="1280" height="720" src="<%= s.trackUrl %>"></iframe>
+                <iframe width="640" height="300" src="<%= s.trackUrl %>"></iframe>
                 
               </tr>
               <% }); %>
@@ -34,6 +34,7 @@
           
           
           <br><br><h2>Reviews</h2>
+        <form id="add-review-form" method="POST"  action="/films/<%= film._id %>/reviews"></form>
           <% if (film.reviews) { %>
             <table>
               <thead>
@@ -48,7 +49,7 @@
               <tbody>
                 <% let total = 0 %>
                 <% film.reviews.forEach(function(r) { %>
-                  <% total += r.rating %>
+                 
                   <tr>
                     <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"> <%= r.userName %></td>
                     <td><%= r.createdAt.toLocaleDateString() %></td>

@@ -21,17 +21,12 @@ function create(req, res) {
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
-    req.body.trackUrl = embeddedUrl
+    req.body.trackUrl = embeddedUrl;
     req.body.film = req.params.id
-    console.log(req.body)
-    console.log(req.body)
-    Soundtrack.create(req.body, function(err) {
+    Soundtrack.create(req.body, function (err) {
+      if(err) return res.redirect(`/films/${req.params.id}`)
       console.log(err)
       res.redirect(`/films/${req.params.id}`);
     });
-  } else {
-    res.redirect(`/films/${req.params.id}`);
+  };
 }
-};
-
-

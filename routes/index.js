@@ -4,7 +4,7 @@ const passport = require('passport');
 
 
 router.get('/', function(req, res, next) {
-  res.redirect('/films');
+  res.render('home', { title: 'homepage'});
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -19,13 +19,13 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect: '/films',
-    failureRedirect: '/films'
+    failureRedirect: '/'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout(function() {
-    res.redirect('/films');
+    res.redirect('/');
   });
 });
 

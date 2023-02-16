@@ -89,6 +89,7 @@ table {
 table thead th {
   padding: 5px;
   border-bottom: 2px solid white;
+  text-align: center;
 }
 
 table td {
@@ -205,15 +206,13 @@ background-image: url("/images/main.jpeg");
   background-color: #F10006;
   color: white; 
   padding: 10px;
-
-
 }
 
 .boxLetters5 {
   background-color: white;
   width: 400px;
   height: 300px;
-  background-color: #F10006;
+  background-color: #902C25;
   color: white; 
   padding: 10px;
 }
@@ -225,14 +224,17 @@ background-image: url("/images/main.jpeg");
   background-color: #F10006;
   color: white; 
   padding: 10px;
+  
 }
 .boxLetters2 {
   background-color: white;
   width: 400px;
   height: 300px;
-  background-color: #F10006;
+  background-color: #61255E;
   color: white; 
   padding: 10px;
+ 
+  
 }
 
 .indexWrapper2 {
@@ -248,4 +250,19 @@ background-image: url("/images/soundtrack.jpeg");
 .indexWrapper5 {
 background-image: url("/images/film.png");
 }
+
+.itemWrapper6 {
+  background-image: url("/images/logo.png");
+}
+
+.card-text {
+  text-align: center;
+}
+
+
+
+
+
+
+
 
