@@ -25,9 +25,12 @@
                 <td><%= s.songTitle %></td>
                 <td><%= s.artistName %></td>
                 
-                <div class="video">
-                  <iframe width="640" height="300" src="<%= s.trackUrl %>"></iframe>
-                </div>
+                <div class="container">
+
+                  <div class="video">
+                    <iframe width="640" height="300" src="<%= s.trackUrl %>"></iframe>
+                    </div>
+                  </div>
                 
               </tr>
               <% }); %>
