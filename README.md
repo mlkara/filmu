@@ -12,7 +12,7 @@
 
   ##### Monica Karasek
 
-  [![LinkedIn Badge](https://img.shields.io/badge/-@monicakarasek-blue?style=flat&logo=Linkedin&logoColor=black)](www.linkedin.com/in/monica-karasek/)
+  [![LinkedIn Badge](https://img.shields.io/badge/-@monica-karasek-blue?style=flat&logo=Linkedin&logoColor=black)](www.linkedin.com/in/monica-karasek/)
 
   ## :pencil: Description
 
