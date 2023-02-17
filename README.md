@@ -40,8 +40,6 @@ Have you ever watched a movie and liked a song? Filmu is a great place for film 
   /> 
 
   ## :computer: Technologies Used
-  A screenshot of your app's landing page and any other screenshots of interest.
-
   ![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
   ![Express](https://img.shields.io/badge/-Express-05122A?style=flat&logo=express)
   ![Node](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
@@ -96,6 +94,6 @@ Have you ever watched a movie and liked a song? Filmu is a great place for film 
 
 ## :satellite: Upcoming Features
 
-- [:x:] Saving favorite movie or soundtrack
+- [:x:] Favorite movie or soundtrack list
 
 - [:x:] API Integration
