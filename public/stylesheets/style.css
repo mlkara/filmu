@@ -206,34 +206,6 @@ li {
   overflow-y: scroll;
 }
 
-.boxLetters5 {
-  background-color: white;
-  width: 400px;
-  height: 300px;
-  background-color: #f10006;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 0.8em;
-  box-shadow: 0 0 0 0.4em #f10006;
-  outline: 0.8em solid #f10006;
-}
-
-.boxLetters3 {
-  background-color: white;
-  width: 400px;
-  height: 300px;
-  background-color: #f10006;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 0.8em;
-  box-shadow: 0 0 0 0.4em #f10006;
-  outline: 0.8em solid #f10006;
-}
-
 .boxLetters2 {
   background-color: #61255e;
   color: white;
@@ -241,6 +213,24 @@ li {
   outline: 0.8em solid #61255e;
   width: 80%;
   height: 80%;
+}
+
+.boxLetters3 {
+  background-color: white;
+  background-color: #f10006;
+  color: white;
+  border-radius: 0.8em;
+  box-shadow: 0 0 0 0.4em #f10006;
+  outline: 0.8em solid #f10006;
+}
+
+.boxLetters5 {
+  background-color: white;
+  background-color: #f10006;
+  color: white;
+  border-radius: 0.8em;
+  box-shadow: 0 0 0 0.4em #f10006;
+  outline: 0.8em solid #f10006;
 }
 
 .indexWrapper2 {
@@ -251,20 +241,24 @@ li {
 
 .indexWrapper3 {
   background-image: url("/images/soundtracks.jpeg");
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .indexWrapper4 {
   background-image: url("/images/soundtrack.jpeg");
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .indexWrapper5 {
   background-image: url("/images/film.png");
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .itemWrapper6 {
   background-image: url("/images/logo.jpg");
-  text-align: center;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-color: black;
   background-repeat: no-repeat;
@@ -317,7 +311,7 @@ footer {
   color: white;
   border: 1vmin solid #2cb3b8;
   border-radius: 4vmin;
-  font-size: 10px;
+  font-size: 15px;
   outline: none;
   font-weight: bold;
 }
@@ -343,7 +337,11 @@ a:hover {
   overflow: scroll;
 }
 
-iframe {
-  /* width: 80%; */
+.butSound {
+  margin: 2vim;
+}
+
+.butSound {
+  grid-column: span 2;
 }
 

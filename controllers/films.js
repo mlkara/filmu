@@ -5,8 +5,7 @@ module.exports = {
   index,
   show,
   new: newFilm,
-  create,
-  // delete
+  create
 };
 
 function index(req, res) {
@@ -42,7 +41,4 @@ function create(req, res) {
   });
 }
 
-// router.delete('/films/:id', function(req, res) {
-//   films.splice(req.params.id, 1);
-//   res.redirect('/films');
-// })
+

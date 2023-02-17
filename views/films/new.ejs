@@ -1,31 +1,20 @@
-
 <%- include('../partials/header') %>
-<div class="indexWrapper5">
-  <div class="boxLetters5">
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-        </div>
-          <div class="col-md-8">
-           <div class="card-body">
-          <div class="addFilm"><h5 class="card-title">ADD FILM</h5></div>
-              <p class="card-text">
-              <div class="addFilm2"><form id="new-form" action="/films" method="POST">
-              <label>Title:</label>
-              <input type="text" name="title">
-              <label>Year:</label>
-              <input type="number" name="releaseYear">
-              <input type="submit" value="ADD FILM">
-            </form></div></p>
-            <p class="card-text"><small class="text-muted">Here's looking at you, Filmu!</small></p>
-          </div>
-        </div>
+  <div class="indexWrapper5 flex-ctr">
+    <div class="boxLetters boxLetters5">
+      <h1>ADD FILM</h1>
+      <div class="addFilm2">
+        <form id="new-form" action="/films" method="POST">
+          <label>Title:</label>
+          <input type="text" name="title">
+          <label>Year:</label>
+          <input type="text" name="releaseYear">
+          <button class="butSound" type="submit">ADD FILM</button>
+        </form>
+        <p class="card-text"><small class="text-muted">Here's looking at you, Filmu!</small></p>
       </div>
     </div>
-  </div>
-</div>
 
 
 
-<%- include('../partials/footer') %>
+
+    <%- include('../partials/footer') %>

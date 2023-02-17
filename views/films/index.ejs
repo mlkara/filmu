@@ -1,23 +1,19 @@
 <%- include('../partials/header') %>
 
-<div class='indexWrapper flex-ctr'>
-  <div class='boxLetters'>
-
-    <% films.forEach(function(f) { %>
-      
-      
-      <tr>
-        <td><%= f.title %></td>
-     <div class="details">  <td><a href="/films/<%= f._id %>">DETAILS</a></td></div> 
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
-  
-  <p class="card-text"><small class="text-muted">You had me at Filmu.</small></p>
-  
-  
+  <div class='indexWrapper flex-ctr'>
+    <div class='boxLetters'>
+      <% films.forEach(function(f) { %>
+        <table>
+          <tr>
+            <td>
+              <%= f.title %>
+            </td>
+            <td><a href="/films/<%= f._id %>">DETAILS</a></td>
+          </tr>
+          <% }); %>
+            </tbody>
+        </table>
+        <p class="card-text"><small class="text-muted">You had me at Filmu.</small></p>
+    </div>
   </div>
-</div>
-
-<%- include('../partials/footer') %>
+  <%- include('../partials/footer') %>

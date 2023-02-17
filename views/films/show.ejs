@@ -9,11 +9,11 @@
        <div><%= film.releaseYear %></div>
       
            <% if (user) { %>
-            <button class="addSound"><a href='/films/<%= film._id %>/soundtracks/new'>ADD SOUNDTRACK</a></button>
+            <button class="addSound"><a href='/films/<%= film._id %>/soundtracks/new'>ADD SONG TO SOUNDTRACK</a></button>
             <% } %>
             
 
-            <div>SOUNDTRACKS:</div>
+            <div>SONGS ON FILM SOUNDTRACK:</div>
            
             <% soundtracks.forEach(function(s) { %>
               <table>
