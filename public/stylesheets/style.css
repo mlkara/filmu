@@ -10,7 +10,7 @@ body {
   grid-template-rows: 50px 1fr 30px;
 }
 
-body > nav {
+body>nav {
   background-color: #f10006;
   display: flex;
   justify-content: flex-end;
@@ -19,13 +19,13 @@ body > nav {
   color: white;
 }
 
-nav > img {
+nav>img {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
 }
 
-body > main {
+body>main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,11 +34,11 @@ body > main {
   overflow-y: scroll;
 }
 
-body > main h1:first-child {
+body>main h1:first-child {
   margin-bottom: 50px;
 }
 
-nav > a {
+nav>a {
   margin: 20px;
   text-decoration: none;
   padding: 10px;
@@ -46,12 +46,12 @@ nav > a {
   color: white;
 }
 
-nav > a:hover:not(.active) {
+nav>a:hover:not(.active) {
   color: #fd8e67;
   background-color: #f10006;
 }
 
-nav > a.active {
+nav>a.active {
   color: white;
   cursor: default;
 }
@@ -64,7 +64,7 @@ nav > a.active {
 
 #new-form *,
 #add-review-form *,
-#add-performer-form * {
+#add-soundtrack-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -118,7 +118,7 @@ table td {
 }
 
 #add-review-form input[type="submit"],
-#add-performer-form input[type="submit"] {
+#add-soundtrack-form input[type="submit"] {
   width: 10rem;
   grid-column: 2 / 3;
 }
@@ -178,11 +178,6 @@ li {
   height: 40px;
 }
 
-.indexWrapper {
-  background-image: url("/images/main.jpeg");
-  width: 100%;
-  height: 100%;
-}
 
 .flex-ctr {
   display: flex;
@@ -224,13 +219,10 @@ li {
   outline: 0.8em solid #f10006;
 }
 
-.boxLetters5 {
-  background-color: white;
-  background-color: #f10006;
-  color: white;
-  border-radius: 0.8em;
-  box-shadow: 0 0 0 0.4em #f10006;
-  outline: 0.8em solid #f10006;
+.indexWrapper {
+  background-image: url("/images/main.jpeg");
+  width: 100%;
+  height: 100%;
 }
 
 .indexWrapper2 {
@@ -244,18 +236,14 @@ li {
   width: 100%;
   height: 100%;
 }
+
 .indexWrapper4 {
-  background-image: url("/images/soundtrack.jpeg");
-  width: 100%;
-  height: 100%;
-}
-.indexWrapper5 {
   background-image: url("/images/film.png");
   width: 100%;
   height: 100%;
 }
 
-.itemWrapper6 {
+.itemWrapper5 {
   background-image: url("/images/logo.jpg");
   width: 100%;
   height: 100%;
@@ -265,17 +253,10 @@ li {
   background-attachment: fixed;
   background-position: center;
 }
+
 .card-text {
   text-align: center;
 }
-
-.video {
-  overflow: hidden;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-
 
 footer {
   height: 60px;
@@ -296,6 +277,7 @@ footer {
   font-size: 12px;
   color: #f10006;
 }
+
 .details:hover {
   background-color: #f10006;
   color: white;
@@ -333,6 +315,7 @@ a:hover {
 .container {
   overflow-y: scroll;
 }
+
 .container2 {
   overflow: scroll;
 }
@@ -344,4 +327,3 @@ a:hover {
 .butSound {
   grid-column: span 2;
 }
-

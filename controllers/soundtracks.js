@@ -6,12 +6,11 @@ module.exports = {
   create
 };
 
-
 function newSoundtrack(req, res) {
-  Film.find({}, function(err, film) {
-    res.render('soundtracks/new', {title: 'Soundtrack Title', film, filmId: req.params.id})
+  Film.find({}, function (err, film) {
+    res.render('soundtracks/new', { title: 'Soundtrack Title', film, filmId: req.params.id })
   })
-}
+};
 
 function create(req, res) {
   var trackUrl = req.body.trackUrl
@@ -24,9 +23,8 @@ function create(req, res) {
     req.body.trackUrl = embeddedUrl;
     req.body.film = req.params.id
     Soundtrack.create(req.body, function (err) {
-      if(err) return res.redirect(`/films/${req.params.id}`)
-      console.log(err)
+      if (err) return res.redirect(`/films/${req.params.id}`)
       res.redirect(`/films/${req.params.id}`);
     });
   };
-}
+};
