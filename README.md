@@ -12,8 +12,6 @@
 
   ##### Monica Karasek
 
-  [![LinkedIn Badge](https://img.shields.io/badge/-@monica-karasek-blue?style=flat&logo=Linkedin&logoColor=black)](www.linkedin.com/in/monica-karasek/)
-
   ## :pencil: Description
 
 Have you ever watched a movie and liked a song? Filmu is a great place for film and music lovers to add their favorite songs to all their best-loved films. Or they can peruse the songs listed under any of the films featured and leave reviews. As Dorothy and Toto once said, "There's no place like Filmu!"
