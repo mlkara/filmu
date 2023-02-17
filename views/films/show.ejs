@@ -1,46 +1,52 @@
 <%- include('../partials/header') %>
 
 
-<div class="indexWrapper2">
-  <div class="boxLetters2">
-
-    
-    <section id="show-page">
+<div class="indexWrapper2 flex-ctr">
+  <div class="boxLetters boxLetters2">
+       <div>FILM TITLE:</div>
+       <div><%= film.title %></div>
+       <div>YEAR:</div>
+       <div><%= film.releaseYear %></div>
       
-      <div>FILM TITLE:</div>
-      <div><%= film.title %></div>
-      <div>YEAR:</div>
-      <div><%= film.releaseYear %></div>
-      <ul>
-        <ul>
-          <% if (user) { %>
+           <% if (user) { %>
             <button class="addSound"><a href='/films/<%= film._id %>/soundtracks/new'>ADD SOUNDTRACK</a></button>
             <% } %>
             
-            
+
             <div>SOUNDTRACKS:</div>
+           
             <% soundtracks.forEach(function(s) { %>
+              <table>
               <tr>
                 <td><%= s.albumTitle %></td>
                 <td><%= s.songTitle %></td>
                 <td><%= s.artistName %></td>
-                
-                <div class="container">
-
-                  <div class="video">
-                    <iframe width="640" height="300" src="<%= s.trackUrl %>"></iframe>
-                    </div>
-                  </div>
-                
               </tr>
-              <% }); %>
-            </div>
-          </div>
+            </table>
+            <hr>
           
-          
+                <iframe src="<%= s.trackUrl %>"></iframe>
+            
+            <% }); %>
+
           <br><br><h2>Reviews</h2>
-        <form id="add-review-form" method="POST"  action="/films/<%= film._id %>/reviews"></form>
-          <% if (film.reviews) { %>
+          <% if (user) { %>
+            <form id="add-review-form" method="POST"
+              action="/films/<%= film._id %>/reviews">
+              <label>Review:</label>
+              <textarea name="content"></textarea>
+              <label>Rating:</label>
+              <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+              </select>
+              <input type="submit" value="Add Review">
+            </form>
+          <% } %>
+          <% if (film.reviews.length) { %>
             <table>
               <thead>
                 <tr>
@@ -54,7 +60,7 @@
               <tbody>
                 <% let total = 0 %>
                 <% film.reviews.forEach(function(r) { %>
-                 
+                  <% total += r.rating %>
                   <tr>
                     <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"> <%= r.userName %></td>
                     <td><%= r.createdAt.toLocaleDateString() %></td>
@@ -73,7 +79,7 @@
                       <td colspan="2"></td>
                       <td>
                         <strong>
-                          <%= (total / film.reviews).toFixed(1) %>
+                          <%= (total / film.reviews.length).toFixed(1) %>
                         </strong>
                       </td>
                     </tr>
@@ -84,6 +90,8 @@
                   <% } %>
                   <p class="card-text"><small>Play Filmu again, Sam.</small></p>            
                 </div>
-                </div>
+              </div>
+               
+
                 <%- include('../partials/footer') %>
                 

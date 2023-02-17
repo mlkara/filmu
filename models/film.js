@@ -32,17 +32,17 @@ const filmSchema = new Schema({
 
   releaseYear: {
     type: Number,
-    default: function() {
-        return new Date().getFullYear();
+    default: function () {
+      return new Date().getFullYear();
     },
     min: 1927
-},
-reviews: [reviewSchema],
+  },
+  reviews: [reviewSchema],
 
-soundtracks: [{
-  type: Schema.Types.ObjectId, 
-  ref: 'Soundtrack'
-}],
+  soundtracks: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Soundtrack'
+  }],
 
 }, {
   timestamps: true

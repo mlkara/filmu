@@ -7,14 +7,10 @@ body {
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas:
-    "nav"
-    "main";
+  grid-template-rows: 50px 1fr 30px;
 }
 
 body > nav {
-  grid-area: nav;
   background-color: #f10006;
   display: flex;
   justify-content: flex-end;
@@ -30,7 +26,6 @@ nav > img {
 }
 
 body > main {
-  grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,14 +108,9 @@ table td {
   background-color: white;
 }
 
-#show-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-}
 
 #add-review-form,
-#add-performer-form {
+#add-soundtrack-form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
@@ -188,22 +178,24 @@ li {
   height: 40px;
 }
 
-img {
-  height: 750px;
-  width: 1200px;
-}
-
 .indexWrapper {
   background-image: url("/images/main.jpeg");
+  width: 100%;
+  height: 100%;
+}
+
+.flex-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boxLetters {
   background-color: black;
-  width: 400px;
-  height: 300px;
+  max-width: 400px;
+  height: 70%;
   color: white;
   padding: 10px;
-  margin: 0 auto;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -211,6 +203,7 @@ img {
   border-radius: 0.8em;
   box-shadow: 0 0 0 0.4em black;
   outline: 0.8em solid black;
+  overflow-y: scroll;
 }
 
 .boxLetters5 {
@@ -240,23 +233,20 @@ img {
   box-shadow: 0 0 0 0.4em #f10006;
   outline: 0.8em solid #f10006;
 }
+
 .boxLetters2 {
-  background-color: white;
-  width: 400px;
-  height: 300px;
   background-color: #61255e;
   color: white;
-  padding: 10px;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 0.8em;
   box-shadow: 0 0 0 0.4em #61255e;
   outline: 0.8em solid #61255e;
+  width: 80%;
+  height: 80%;
 }
 
 .indexWrapper2 {
   background-image: url("/images/soundtrack.jpg");
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .indexWrapper3 {
@@ -286,9 +276,6 @@ img {
 }
 
 .video {
-  width: 100%;
-  height: 100vh;
-  position: relative; 
   overflow: hidden;
   padding: 20px;
   display: flex;
@@ -296,7 +283,7 @@ img {
 }
 
 
-.footer {
+footer {
   height: 60px;
   text-align: center;
   font-size: 5px;
@@ -348,3 +335,15 @@ a:hover {
   background-color: #2cb3b8;
   color: white;
 }
+
+.container {
+  overflow-y: scroll;
+}
+.container2 {
+  overflow: scroll;
+}
+
+iframe {
+  /* width: 80%; */
+}
+

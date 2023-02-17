@@ -6,10 +6,11 @@ module.exports = {
   show,
   new: newFilm,
   create,
+  // delete
 };
 
 function index(req, res) {
-  Film.find({}, function (err, films) {
+  Film.find({}).sort('title').exec(function (err, films) {
     res.render("films/index", { title: "All Films", films });
   });
 }
@@ -40,3 +41,8 @@ function create(req, res) {
     res.redirect(`/films/${film._id}`);
   });
 }
+
+// router.delete('/films/:id', function(req, res) {
+//   films.splice(req.params.id, 1);
+//   res.redirect('/films');
+// })
