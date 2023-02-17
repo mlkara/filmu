@@ -18,26 +18,26 @@ Have you ever watched a movie and liked a song? Filmu is a great place for film 
   </div>
 
  
-  | <h3 align="center">Home Page</h3> | <img
+   <h3>Home Page</h3>  <img
     src="https://i.imgur.com/jxCa7gK.png"
     width="700"
-  /> |
-  | <h3 align="center">Film Index Page</h3> | <img
+  /> 
+   <h3>Film Index Page</h3>  <img
   src="https://i.imgur.com/Qcn5P8T.jpg)\"
   width="700"
-  /> |
-  | <h3 align="center">Add a Film Page</h3> | <img
+  /> 
+   <h3>Add a Film Page</h3>  <img
     src="https://i.imgur.com/qXKFVrc.png"
     width="700"
-  /> |
-   | <h3 align="center">Film Page</h3> | <img
+  /> 
+    <h3>Film Page</h3> <img
     src="https://i.imgur.com/QbNRX6i.png"
     width="700"
-  /> |
-   | <h3 align="center">Add a Song Page</h3> | <img
+  /> 
+    <h3>Add a Song Page</h3>  <img
     src="https://i.imgur.com/CnEqneI.png"
     width="700"
-  /> |
+  /> 
 
   ## :computer: Technologies Used
   A screenshot of your app's landing page and any other screenshots of interest.
