@@ -1,8 +1,11 @@
+const film = require('../models/film');
 const Film = require('../models/film');
 
 module.exports = {
   create,
-  delete: deleteReview
+  delete: deleteReview,
+  edit, 
+  update,
 };
 
 function deleteReview(req, res, next) {
@@ -28,6 +31,24 @@ function create(req, res) {
 
     film.reviews.push(req.body);
     film.save(function (err) {
+      res.redirect(`/films/${film._id}`);
+    });
+  });
+};
+
+function edit(req, res) {
+  Film.findOne({'reviews._id': req.params.id}, function(err, film) {
+    const review = film.reviews.id(req.params.id);
+    res.render('reviews/edit', {review});
+  });
+}
+
+function update(req, res) {
+  Film.findOne({'reviews._id': req.params.id}, function(err, film) {
+    const reviewSubdoc = film.reviews.id(req.params.id);
+    if (!reviewSubdoc.user.equals(req.user._id)) return res.redirect(`/films/${film._id}`);
+    reviewSubdoc.content = req.body.content;
+    film.save(function(err) {
       res.redirect(`/films/${film._id}`);
     });
   });
