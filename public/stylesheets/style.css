@@ -219,6 +219,7 @@ li {
   outline: 0.8em solid #f10006;
 }
 
+
 .indexWrapper {
   background-image: url("/images/main.jpeg");
   width: 100%;
@@ -254,6 +255,11 @@ li {
   background-position: center;
 }
 
+.indexWrapper6 {
+  background-image: url("/images/updateReview.jpg");
+  width: 100%;
+  height: 100%;
+}
 .card-text {
   text-align: center;
 }
