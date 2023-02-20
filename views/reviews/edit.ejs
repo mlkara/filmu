@@ -1,8 +1,10 @@
-<%- include('../partials/header') %>
-        
-  <form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
-    <input name="content" value="<%= review.content %>">
-    <button type="submit">UPDATE REVIEW</button>
-  </form>
-
-<%- include('../partials/footer') %>
+<%- include('../partials/header', {title: 'Edit Review - FILMU' }) %>
+  <div class="indexWrapper6 flex-ctr">
+    <div class="boxLetters boxLetters4">
+      <form action="/reviews/<%= review._id %>?_method=PUT" method="POST">
+        <input name="content" value="<%= review.content %>">
+        <button type="submit">UPDATE REVIEW</button>
+      </form>
+    </div>
+  </div>
+  <%- include('../partials/footer') %>

@@ -219,6 +219,15 @@ li {
   outline: 0.8em solid #f10006;
 }
 
+.boxLetters4 {
+  background-color: white;
+  background-color: #E33C21;
+  color: white;
+  border-radius: 0.8em;
+  box-shadow: 0 0 0 0.4em #E33C21;
+  outline: 0.8em solid #E33C21;
+}
+
 
 .indexWrapper {
   background-image: url("/images/main.jpeg");
